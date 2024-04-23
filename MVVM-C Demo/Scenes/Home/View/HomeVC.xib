@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="MVVM_C_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="lblMessage" destination="RYm-gx-4Sm" id="3Bv-1b-IHR"/>
+                <outlet property="lblTitle" destination="Rmy-KR-qUG" id="xEh-bT-RTy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p22-bC-8nU">
+                    <rect key="frame" x="20" y="59" width="353" height="759"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fnY-s1-jhE">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="614.33333333333337"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rmy-KR-qUG">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="56"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="ubK-SK-u6J"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYm-gx-4Sm">
+                                    <rect key="frame" x="0.0" y="71.999999999999972" width="353" height="476.33333333333326"/>
+                                    <string key="text">First we need a Coordinator protocol that all our coordinators will conform to. Although there are lots of things you could do with this, I would suggest the bare minimum you need is:
+
+A property to store any child coordinators. We won’t need child coordinators here, but I’ll still add a property for them so you can expand this with your own code.
+A property to store the navigation controller that’s being used to present view controllers. Even if you don’t show the navigation bar at the top, using a navigation controller is the easiest way to present view controllers.
+A start() method to make the coordinator take control. This allows us to create a coordinator fully and activate it only when we’re ready.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                    <color key="textColor" white="0.0" alpha="0.74763418029999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RzO-Ky-u2Y">
+                                    <rect key="frame" x="0.0" y="564.33333333333337" width="353" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTS-p7-gZA">
+                                            <rect key="frame" x="86.666666666666686" y="0.0" width="180" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="180" id="9bP-bJ-QH6"/>
+                                                <constraint firstAttribute="height" constant="50" id="A6J-cU-yYU"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
+                                                <backgroundConfiguration key="background">
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </backgroundConfiguration>
+                                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="btnNext:" destination="-1" eventType="touchUpInside" id="AS7-dk-CJp"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="nTS-p7-gZA" firstAttribute="top" secondItem="RzO-Ky-u2Y" secondAttribute="top" id="dJl-6F-zPQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="nTS-p7-gZA" secondAttribute="bottom" id="w42-xL-DmK"/>
+                                        <constraint firstItem="nTS-p7-gZA" firstAttribute="centerX" secondItem="RzO-Ky-u2Y" secondAttribute="centerX" id="yQr-Ac-R3y"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="fnY-s1-jhE" firstAttribute="leading" secondItem="p22-bC-8nU" secondAttribute="leading" id="3x5-aI-age"/>
+                        <constraint firstItem="fnY-s1-jhE" firstAttribute="height" secondItem="p22-bC-8nU" secondAttribute="height" priority="250" id="738-iq-uwJ"/>
+                        <constraint firstAttribute="bottom" secondItem="fnY-s1-jhE" secondAttribute="bottom" id="NjO-sO-EQY"/>
+                        <constraint firstItem="fnY-s1-jhE" firstAttribute="width" secondItem="p22-bC-8nU" secondAttribute="width" id="YdO-8j-2wm"/>
+                        <constraint firstAttribute="trailing" secondItem="fnY-s1-jhE" secondAttribute="trailing" id="rRq-Vv-50C"/>
+                        <constraint firstItem="fnY-s1-jhE" firstAttribute="top" secondItem="p22-bC-8nU" secondAttribute="top" id="seQ-rT-5Wn"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="RWn-fN-nmD"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="ukx-DH-ONu"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeu-ir-rDp">
+                    <rect key="frame" x="0.0" y="62" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="7V7-qk-Pfa"/>
+                        <constraint firstAttribute="width" constant="50" id="yaA-HX-iXJ"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <imageReference key="image" image="arrowshape.backward.circle.fill" catalog="system" symbolScale="large"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="btnBack:" destination="-1" eventType="touchUpInside" id="idQ-W0-yy8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+            <constraints>
+                <constraint firstItem="qeu-ir-rDp" firstAttribute="centerY" secondItem="Rmy-KR-qUG" secondAttribute="centerY" id="I2S-2b-c9S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="p22-bC-8nU" secondAttribute="bottom" id="NgJ-XZ-IkQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p22-bC-8nU" secondAttribute="trailing" constant="20" id="aFq-V0-Fud"/>
+                <constraint firstItem="p22-bC-8nU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="mal-ic-rQw"/>
+                <constraint firstItem="qeu-ir-rDp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qnV-i4-vuN"/>
+                <constraint firstItem="p22-bC-8nU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="v6l-B8-FZi"/>
+            </constraints>
+            <point key="canvasLocation" x="-91" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowshape.backward.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
